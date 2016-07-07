@@ -1,0 +1,40 @@
+---
+title: "atMisc"
+author: "Andrew Taylor"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atMisc}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Convert letters to numbers:
+
+`letters2numbers()` returns the number(s) corresponding to a letter or set of letters. Useful when a researcher tells you he is interested in column k, bc, and dd from an excel sheet.
+
+
+
+Usage: `letters2numbers(letterlist)`
+
+## Quickly print data.frame, table, and matrix objects to word documents.
+
+`qprint()` prints data.frame, matrix, and table objects to word documents.
+
+Usage: `qprint(table = FALSE, filename = "RPrintout.doc", tableHeading = "Table X", row.names = FALSE, fontsize = 10, column.margins = 1)`
+
+
+
+## A 'Better' `rep()` function:
+
+`rep_()` is a 'better' implementation of the rep (repeat) base R function.
+
+Usage: `rep_(x, times = 1, each = NULL)`
+
+
+## Get Current Day's Date
+
+`tdate()` returns a character string of the current day's date. It is a convenience wrapper for 'format(Sys.Date())'.
+
+Usage: `tdate(format = "%Y%B%d")`
+
