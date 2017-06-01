@@ -12,13 +12,12 @@
 #' #indexLocation <- letters2numbers(c('k', 'bc', 'dd'))
 #' #actualNames <- names(df)[indexLocation]
 letters2numbers <- function (letterlist) {
-    letterlist <- tolower(letterlist)
     eg <- expand.grid(letters[1:26], letters[1:26])
     j <- c(letters[1:26], paste0(eg[, 2], eg[, 1]))
     conversionTable <- data.frame(ColNumber = 1:702, ColLetter = j)
     nums <- subset(conversionTable, conversionTable$ColLetter %in%
         tolower(letterlist))
-    orig = data.frame(ColLetter = letterlist)
+    orig = data.frame(ColLetter = tolower(letterlist))
     out <- suppressWarnings(dplyr::left_join(orig, nums, by = 'ColLetter')[[2]])
     return(out)
 }
